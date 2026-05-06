@@ -1,0 +1,3 @@
+chromadb==0.4.24
+qwen-api==1.0.10
+python-dotenv==1.0.1

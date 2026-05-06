@@ -1,0 +1,14 @@
+requests==2.31.0
+beautifulsoup4==4.12.3
+lxml==4.9.4
+langchain==0.1.10
+qwen-api==1.0.10
+chromadb==0.4.24
+streamlit==1.32.2
+python-dotenv==1.0.1
+logging==0.5.1.2
+json5==0.9.17
+hashlib==20081119
+pandas==2.2.1
+celery[redis]==5.3.6
+redis==5.0.1

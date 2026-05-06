@@ -1,0 +1,20 @@
+# 环境变量与敏感信息
+.env
+# 存储目录（数据、日志、临时文件）
+/storage/
+# 虚拟环境
+venv/
+env/
+# Python编译文件
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+# 静态资源（可选，若不提交logo、样式文件）
+/ui/static/
+# 文档（可选，若不提交docs目录）
+/docs/
+# 其他冗余文件
+.DS_Store
+*.log
+*.bak
