@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Study Hub</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>📚 Study Hub</h1>
+    <p class="subtitle">Organize your study sessions and track your progress</p>
+  </header>
+
+  <main>
+    <!-- Study Timer -->
+    <section class="card" id="timer-section">
+      <h2>⏱ Pomodoro Timer</h2>
+      <div class="timer-display" id="timer-display">25:00</div>
+      <div class="timer-controls">
+        <button class="btn btn-primary" id="start-btn" onclick="startTimer()">Start</button>
+        <button class="btn btn-secondary" id="pause-btn" onclick="pauseTimer()" disabled>Pause</button>
+        <button class="btn btn-danger" onclick="resetTimer()">Reset</button>
+      </div>
+      <div class="timer-modes">
+        <button class="mode-btn active" onclick="setMode(25, this)">Focus (25m)</button>
+        <button class="mode-btn" onclick="setMode(5, this)">Short Break (5m)</button>
+        <button class="mode-btn" onclick="setMode(15, this)">Long Break (15m)</button>
+      </div>
+    </section>
+
+    <!-- Flashcards -->
+    <section class="card" id="flashcard-section">
+      <h2>🃏 Flashcards</h2>
+      <div class="flashcard" id="flashcard" onclick="flipCard()">
+        <div class="flashcard-inner" id="flashcard-inner">
+          <div class="flashcard-front">
+            <p id="card-question">Click to flip the card!</p>
+          </div>
+          <div class="flashcard-back">
+            <p id="card-answer">Answer will appear here.</p>
+          </div>
+        </div>
+      </div>
+      <div class="card-controls">
+        <button class="btn btn-secondary" onclick="prevCard()">← Previous</button>
+        <span id="card-counter">1 / 5</span>
+        <button class="btn btn-secondary" onclick="nextCard()">Next →</button>
+      </div>
+      <div class="add-card">
+        <input type="text" id="new-question" placeholder="New question…" />
+        <input type="text" id="new-answer" placeholder="Answer…" />
+        <button class="btn btn-primary" onclick="addCard()">Add Card</button>
+      </div>
+    </section>
+
+    <!-- To-Do / Study Checklist -->
+    <section class="card" id="todo-section">
+      <h2>✅ Study Checklist</h2>
+      <div class="add-todo">
+        <input type="text" id="todo-input" placeholder="Add a study task…" onkeydown="if(event.key==='Enter') addTodo()" />
+        <button class="btn btn-primary" onclick="addTodo()">Add</button>
+      </div>
+      <ul id="todo-list"></ul>
+    </section>
+
+    <!-- Notes -->
+    <section class="card" id="notes-section">
+      <h2>📝 Quick Notes</h2>
+      <textarea id="notes-area" placeholder="Jot down notes here… (auto-saved)"></textarea>
+    </section>
+  </main>
+
+  <footer>
+    <p>Study Hub &mdash; Stay focused, stay curious.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
